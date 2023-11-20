@@ -9,7 +9,7 @@ hgtg = "THE_HITCHHIKERS_GUIDE_TO_THE_GALAXY 2.pdf"
 text = extract_text(books + hgtg)
 words = re.split("[ \n]+", text)
 
-                            
-app = SpeedReaderApp(words, 0.10, # delay (how many fractions of a second between words)
-                    0)# what word to start on
+# 906          
+app = SpeedReaderApp(words, 0.12, # delay (how many fractions of a second between words)
+                    906)# what word to start on
 app.run() 
