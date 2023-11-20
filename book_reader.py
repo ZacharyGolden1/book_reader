@@ -1,12 +1,12 @@
 from pdfminer.high_level import extract_text
-import time
+import re
+from tkinter_UI import SpeedReaderApp
 
 books = "/Users/golden/Desktop/Books/Personal/"
 grit = "Grit by Angela Duckworth.pdf"
 
 text = extract_text(books + grit)
-words = text.split(" ")
+words = re.split("[ \n]+", text)
 
-for word in words:
-    print(word)
-    time.sleep(0.1)
+app = SpeedReaderApp(words, 0.10)
+app.run()
